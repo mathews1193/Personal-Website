@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% if title %} <!-- if statement used to find subtitles for pages-->
+        <title> Space City - {{ title }}</title>
+    {% else %}
+    <title> Space City </title> <!-- if no subtitle found used dafault-->
+    {% endif %}
+
+</head>
+<body>
+    {% block content %}{% endblock %} <!-- content for each page -->
+    
+</body>
+</html>

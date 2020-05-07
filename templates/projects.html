@@ -1,12 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-</head>
-<body>
-    <h1>Projects</h1>
-    
-</body>
-</html>
+{% extends "layout.html" %}
+{% block content %}
+    {% for post in posts %} <!-- for loop usesd to access data in a post and display it--> 
+        <h1> {{post.title}} </h1>
+        <p> By {{post.author}} on {{post.date_posted}}</p>
+        <p>{{post.content}}</p>
+    {% endfor %} <!-- no more data in post to access--> 
+{% endblock content %}
