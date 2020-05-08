@@ -1,5 +1,12 @@
+# Main application of the flask website including all the routes to each page 
+
 from flask import Flask , render_template, url_for
+from forms import RegistrationForm, LoginForm
 app = Flask(__name__)
+
+# Secret key for application 
+
+app.config['SECRET_KEY'] = 'c62058f0d97fd33f4c54' 
 
 posts = [
     {
