@@ -1,7 +1,7 @@
 # This page is used to create forms 
 
 from flask_wtf import FlaskForm
-from wtforms import StringField , PasswordField, SubmitField, BooleanField
+from wtforms import StringField, PasswordField, SubmitField, BooleanField
 from wtforms.validators import DataRequired, Length, Email, EqualTo
 
 # class form for user registration 
@@ -11,7 +11,7 @@ class RegistrationForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
     confirm_password = PasswordField('Confirm Password', validators=[DataRequired(), EqualTo('password')]) 
-    Submit = SubmitField('Sign Up')
+    submit = SubmitField('Sign Up')
 
 # class form for user login 
 
@@ -19,4 +19,4 @@ class LoginForm(FlaskForm):
     email = StringField('Email', validators=[DataRequired(), Email()])
     password = PasswordField('Password', validators=[DataRequired()])
     remember = BooleanField('Remember Me')
-    Submit = SubmitField('Login')
+    submit = SubmitField('Login')

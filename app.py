@@ -21,7 +21,6 @@ posts = [
         'content': 'Second application using Python to face detect using artifical intelligence.',
         'date_posted': 'May 7, 2020'
     }
-
 ]
 
 # home page 
@@ -44,6 +43,20 @@ def project():
 @app.route("/contact")
 def contact():
     return render_template('contact.html')
+    
+# registration page 
+@app.route("/register")
+def register():
+    form = RegistrationForm()
+    return render_template('register.html', title='Register', form=form)
+
+# login page 
+@app.route("/login")
+def login():
+    form = LoginForm()
+    return render_template('login.html', title='Login', form=form)
+
+
 
 
 
